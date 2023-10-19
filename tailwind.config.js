@@ -2,7 +2,17 @@
 module.exports = {
   content: ['./src/**/*.{html,js,jsx}'],
   theme: {
-    extend: {},
+    extend: {
+      minWidth: {
+        base: '700px',
+      },
+      minHeight: {
+        base: '600px',
+      },
+      colors: {
+        'base-color': '#6D3B00',
+      },
+    },
   },
   plugins: [],
 };
