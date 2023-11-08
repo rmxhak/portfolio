@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       minWidth: {
-        base: '700px',
+        base: '640px',
       },
       minHeight: {
         base: '600px',
