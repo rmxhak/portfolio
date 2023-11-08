@@ -18,9 +18,10 @@
 
 @layer components {
   .nav-list {
-    @apply hover:cursor-pointer hover:text-red-600;
+    @apply hover:cursor-pointer hover:text-red-600 px-1;
   }
 }
+
 .title {
   font-family: 'Noto Sans KR', sans-serif;
   font-family: 'Satisfy', cursive;

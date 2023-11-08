@@ -1,15 +1,16 @@
+import { useState } from 'react';
+import Header from './components/Header';
+
 function App() {
+  const [selectTab, setSelectTab] = useState('HOME');
+
+  const handleChangeTap = (e) => {
+    setSelectTab(e.target.dataset.name);
+  };
+
   return (
     <>
-      <header>
-        <h1 className='title'>JHW's Portfoilo</h1>
-        <ul className='flex gap-6 justify-center align-middle text-xl transition-all'>
-          <li className='nav-list'>HOME</li>
-          <li className='nav-list'>ABOUT</li>
-          <li className='nav-list'>SKILLS</li>
-          <li className='nav-list'>PROJECTS</li>
-        </ul>
-      </header>
+      <Header selectTab={selectTab} changeTab={handleChangeTap} />
       <main className='w-screen'>
         <section className='home'>
           <div className='logo min-w-base min-h-base'></div>
