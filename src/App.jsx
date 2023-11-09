@@ -19,12 +19,17 @@ function App() {
 
     const visibleSections = sections.map(() => false);
     const observer = new IntersectionObserver((entries) => {
+      let selectLastOne;
       entries.forEach((entry) => {
         const index = sectionRef.current?.indexOf(entry.target);
         visibleSections[index] = entry.isIntersecting;
+
+        selectLastOne =
+          index === sections.length - 1 && entry.isIntersecting && entry.intersectionRatio >= 0.98;
       });
 
-      const navIndex = visibleSections.indexOf(true);
+      const navIndex = selectLastOne ? sections.length - 1 : visibleSections.indexOf(true);
+
       changeCurrentList(sections[navIndex]);
     }, options);
 
@@ -42,9 +47,9 @@ function App() {
   return (
     <>
       <Header currentList={currentList} nav={sections} sectionRef={sectionRef} />
-      <main className='w-screen'>
+      <main>
         <section className='home' ref={(el) => (sectionRef.current[0] = el)}>
-          <Home />
+          <Home sectionRef={sectionRef} />
         </section>
         <section className='about' ref={(el) => (sectionRef.current[1] = el)}>
           <About />
