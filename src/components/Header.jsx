@@ -1,17 +1,13 @@
 import { useEffect, useState } from 'react';
 import { BsList } from 'react-icons/bs';
 
-const NAV = ['home', 'about', 'skills', 'projects'];
-
-const Header = ({ mainRef }) => {
-  const [selectedNav, setSelectedNav] = useState('home');
+const Header = ({ currentList, nav, sectionRef }) => {
   const [isScrolled, setIsScrolled] = useState(0);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
   const [isListed, setIsListed] = useState(false);
 
-  const scrollToMove = (tab, index) => {
-    setSelectedNav(tab);
-    mainRef.current.children[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const scrollToMove = (index) => {
+    sectionRef.current[index]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const handleScroll = () => setIsScrolled(window.scrollY);
@@ -44,11 +40,11 @@ const Header = ({ mainRef }) => {
       <h1 className='title'>JHW's Portfoilo</h1>
       {isDesktop ? (
         <ul className='flex gap-6 mb-2 justify-end items-center text-xl transition-all '>
-          {NAV.map((tab, i) => (
+          {nav.map((tab, i) => (
             <li
               key={i}
-              onClick={() => scrollToMove(tab, i)}
-              className={`nav-list ${tab === selectedNav ? 'text-red-700 border-b-2' : ''}
+              onClick={() => scrollToMove(i)}
+              className={`nav-list ${tab === currentList ? 'text-red-700 border-b-2' : ''}
             `}
             >
               {tab.toUpperCase()}
@@ -62,16 +58,16 @@ const Header = ({ mainRef }) => {
           </div>
           <ul className='flex flex-col text-xl'>
             {isListed &&
-              NAV.map((tab, i) => (
+              nav.map((tab, i) => (
                 <li
                   key={i}
-                  className={`${tab === selectedNav ? 'text-red-700' : ''}
+                  className={`${tab === currentList ? 'text-red-700' : ''}
             `}
                 >
                   <span
                     className='cursor-pointer hover:text-red-600'
                     onClick={() => {
-                      scrollToMove(tab, i);
+                      scrollToMove(i);
                       setIsListed(!isListed);
                     }}
                   >
