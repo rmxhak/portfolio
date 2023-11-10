@@ -36,6 +36,15 @@
   .center {
     @apply flex justify-center items-center;
   }
+
+  .skill-wrap {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    @apply w-[220px] p-6 mb-2 bg-white rounded-xl  cursor-pointer hover:translate-y-2 transition-transform;
+  }
+
+  .skill-title {
+    @apply text-2xl text-amber-500 font-bold border-b mb-2;
+  }
 }
 
 .title {
@@ -90,7 +99,7 @@
 }
 
 .slide-left:nth-child(1) {
-  animation-duration: 1s;
+  animation-duration: 0.8s;
 }
 .slide-left:nth-child(2) {
   animation-duration: 1.5s;
@@ -205,10 +214,74 @@
 
 .fill {
   animation-name: fill;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
+  animation-duration: 1.8s;
+  animation-fill-mode: both;
   animation-direction: reverse;
-  width: 90%;
+  animation-play-state: paused;
+}
+
+.skills:nth-child(1) > .fill {
+  width: calc(90% - 7rem);
+  animation-delay: 0.4s;
+}
+.skills:nth-child(2) > .fill {
+  width: calc(90% - 7rem);
+  animation-delay: 0.6s;
+}
+.skills:nth-child(3) > .fill {
+  width: calc(80% - 7rem);
+  animation-delay: 0.8s;
+}
+.skills:nth-child(4) > .fill {
+  width: calc(70% - 7rem);
+  animation-delay: 1s;
+}
+.skills:nth-child(5) > .fill {
+  width: calc(50% - 7rem);
+  animation-delay: 1.2s;
+}
+.skills:nth-child(6) > .fill {
+  width: calc(60% - 7rem);
+  animation-delay: 1.4s;
+}
+.skills:nth-child(7) > .fill {
+  width: calc(50% - 7rem);
+  animation-delay: 1.5s;
+}
+.skills:nth-child(8) > .fill {
+  width: calc(70% - 7rem);
+  animation-delay: 1.6s;
+}
+
+.animate .fill {
+  animation-play-state: running;
+}
+
+.slide-right {
+  animation-name: slideInRight;
+  animation-play-state: paused;
+}
+
+.animate .slide-right {
+  animation-play-state: running;
+}
+
+.slide-right:nth-child(1) {
+  animation-duration: 0.8s;
+}
+.slide-right:nth-child(2) {
+  animation-duration: 1.5s;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 @keyframes fill {
