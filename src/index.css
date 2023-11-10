@@ -27,10 +27,6 @@
     @apply bg-red-400;
   }
 
-  .unanimate {
-    animation-play-state: paused;
-  }
-
   .octagon-wrap {
     background-color: red;
     width: 80px;
@@ -86,7 +82,13 @@
 
 .slide-left {
   animation-name: slideInLeft;
+  animation-play-state: paused;
 }
+
+.animate .slide-left {
+  animation-play-state: running;
+}
+
 .slide-left:nth-child(1) {
   animation-duration: 1s;
 }
@@ -95,9 +97,16 @@
 }
 
 /* flip */
+
 .flip {
   animation-name: flip;
+  animation-play-state: paused;
 }
+
+.animate .flip {
+  animation-play-state: running;
+}
+
 .about-card:nth-child(1) .flip {
   animation-duration: 0.8s;
 }
@@ -108,19 +117,24 @@
   animation-duration: 1.6s;
 }
 .about-card:nth-child(4) .flip {
-  animation-duration: 2s;
+  animation-duration: 1.9s;
 }
 .about-card:nth-child(5) .flip {
-  animation-duration: 2.4s;
+  animation-duration: 2.3s;
 }
 .about-card:nth-child(6) .flip {
-  animation-duration: 2.8s;
+  animation-duration: 2.6s;
 }
 
 /* fadeIn */
 
 .fadein {
   animation-name: fadeIn;
+  animation-play-state: paused;
+}
+
+.animate .fadein {
+  animation-play-state: running;
 }
 
 .about-card:nth-child(1) .fadein {
@@ -140,7 +154,7 @@
   animation-duration: 2.8s;
 }
 .about-card:nth-child(6) .fadein {
-  animation-duration: 3.2s;
+  animation-duration: 3s;
 }
 
 @keyframes slideInLeft {
@@ -188,3 +202,17 @@
 }
 
 /* skills */
+
+.fill {
+  animation-name: fill;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  width: 90%;
+}
+
+@keyframes fill {
+  100% {
+    width: 0%;
+  }
+}

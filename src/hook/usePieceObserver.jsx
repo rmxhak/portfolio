@@ -8,9 +8,7 @@ const UsePieceObserver = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        [...entry.target.querySelectorAll('.unanimate')].forEach((el) =>
-          el.classList.remove('unanimate')
-        );
+        entry.target.classList.add('animate');
       });
     }, options);
 
