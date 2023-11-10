@@ -26,6 +26,20 @@
   .skills {
     @apply bg-red-400;
   }
+
+  .unanimate {
+    animation-play-state: paused;
+  }
+
+  .octagon-wrap {
+    background-color: red;
+    width: 80px;
+    height: 80px;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  }
+  .center {
+    @apply flex justify-center items-center;
+  }
 }
 
 .title {
@@ -67,3 +81,110 @@
   position: relative;
   display: block;
 }
+
+/* about animation */
+
+.slide-left {
+  animation-name: slideInLeft;
+}
+.slide-left:nth-child(1) {
+  animation-duration: 1s;
+}
+.slide-left:nth-child(2) {
+  animation-duration: 1.5s;
+}
+
+/* flip */
+.flip {
+  animation-name: flip;
+}
+.about-card:nth-child(1) .flip {
+  animation-duration: 0.8s;
+}
+.about-card:nth-child(2) .flip {
+  animation-duration: 1.2s;
+}
+.about-card:nth-child(3) .flip {
+  animation-duration: 1.6s;
+}
+.about-card:nth-child(4) .flip {
+  animation-duration: 2s;
+}
+.about-card:nth-child(5) .flip {
+  animation-duration: 2.4s;
+}
+.about-card:nth-child(6) .flip {
+  animation-duration: 2.8s;
+}
+
+/* fadeIn */
+
+.fadein {
+  animation-name: fadeIn;
+}
+
+.about-card:nth-child(1) .fadein {
+  animation-duration: 1.2s;
+}
+
+.about-card:nth-child(2) .fadein {
+  animation-duration: 1.6s;
+}
+.about-card:nth-child(3) .fadein {
+  animation-duration: 2s;
+}
+.about-card:nth-child(4) .fadein {
+  animation-duration: 2.4s;
+}
+.about-card:nth-child(5) .fadein {
+  animation-duration: 2.8s;
+}
+.about-card:nth-child(6) .fadein {
+  animation-duration: 3.2s;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes flip {
+  0% {
+    opacity: 0;
+    transform: perspective(400px) rotateY(-90deg);
+    animation-timing-function: ease-in;
+  }
+  40% {
+    transform: perspective(400px) rotateY(-20deg);
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    opacity: 1;
+    transform: perspective(400px) rotateY(10deg);
+  }
+
+  100% {
+    transform: perspective(400px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* skills */
