@@ -37,7 +37,7 @@ const Header = ({ currentList, nav, sectionRef }) => {
           : ''
       }
     >
-      <h1 className='title'>JHW's Portfoilo</h1>
+      <h1 className='nav'>JHW's Portfoilo</h1>
       {isDesktop ? (
         <ul className='flex gap-6 mb-2 justify-end items-center text-xl transition-all '>
           {nav.map((tab, i) => (

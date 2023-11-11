@@ -1,4 +1,5 @@
 import UsePieceObserver from '../hook/usePieceObserver';
+import SectionTitle from './ui/SectionTitle';
 
 const SKILLS = {
   html: '90%',
@@ -16,10 +17,7 @@ const Skills = () => {
 
   return (
     <section ref={targetRef} className='bg-[#F9C51E] p-12 h-full w-full'>
-      <div className='flex flex-col gap-4 items-center'>
-        <h2 className='font-bold text-6xl slide-right text-zinc-900'>SKILLS</h2>
-        <div className='w-[100px] h-[4px] bg-zinc-500 slide-right'></div>
-      </div>
+      <SectionTitle title='SKILLS' direction='right' />
       <div className='mt-20 flex flex-col gap-8 lg:flex-row lg:justify-center'>
         <article className='w-[90%] lg:w-[50%] flex justify-around m-auto slide-left'>
           <div className='skill-wrap'>

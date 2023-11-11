@@ -6,6 +6,7 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { LiaPenSolid } from 'react-icons/lia';
 
 import AboutCard from './ui/AboutCard';
+import SectionTitle from './ui/SectionTitle';
 
 const About = () => {
   const targetRef = UsePieceObserver();
@@ -15,10 +16,7 @@ const About = () => {
       className='about pt-12 flex flex-col gap-20 justify-center items-center'
       ref={targetRef}
     >
-      <div className='flex flex-col gap-4 items-center'>
-        <h2 className='font-bold text-4xl slide-left text-zinc-900 '>About Me</h2>
-        <div className='w-[80px] h-[4px] bg-zinc-500 slide-left '></div>
-      </div>
+      <SectionTitle title='ABOUT ME' direction='left' />
       <div className='piece-hidden flex gap-8 justify-center flex-wrap'>
         <AboutCard Icon={BsFillPersonFill} contents={{ title: '이름', detail: '장현우' }} />
         <AboutCard Icon={SlCalender} contents={{ title: '생년월일', detail: '1993.12.09' }} />
