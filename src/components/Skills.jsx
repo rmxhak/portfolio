@@ -18,7 +18,7 @@ const Skills = () => {
   return (
     <section ref={targetRef} className='bg-[#F9C51E] p-12 h-full w-full'>
       <SectionTitle title='SKILLS' direction='right' />
-      <div className='mt-20 flex flex-col gap-8 lg:flex-row lg:justify-center'>
+      <div className='mt-20 flex flex-col gap-8 lg:flex-row lg:justify-center lg:max-w-[1400px] lg:m-auto'>
         <article className='w-[90%] lg:w-[50%] flex justify-around m-auto slide-left'>
           <div className='skill-wrap'>
             <h2 className='skill-title'>Forntend</h2>

@@ -17,7 +17,7 @@
     @apply w-screen min-w-base px-20 pt-4 fixed top-0 z-10 font-bold;
   }
   section {
-    @apply min-w-base min-h-base;
+    @apply min-w-base min-h-base overflow-hidden;
   }
 }
 

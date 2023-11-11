@@ -48,16 +48,16 @@ function App() {
     <>
       <Header currentList={currentList} nav={sections} sectionRef={sectionRef} />
       <main>
-        <section className='home' ref={(el) => (sectionRef.current[0] = el)}>
+        <section ref={(el) => (sectionRef.current[0] = el)} className='w-full home'>
           <Home sectionRef={sectionRef} />
         </section>
-        <section className='about' ref={(el) => (sectionRef.current[1] = el)}>
+        <section ref={(el) => (sectionRef.current[1] = el)} className='w-full'>
           <About />
         </section>
-        <section className='skills' ref={(el) => (sectionRef.current[2] = el)}>
+        <section ref={(el) => (sectionRef.current[2] = el)} className='w-full'>
           <Skills />
         </section>
-        <section className='projects' ref={(el) => (sectionRef.current[3] = el)}>
+        <section ref={(el) => (sectionRef.current[3] = el)} className='w-full'>
           <Projects />
         </section>
       </main>

@@ -12,10 +12,7 @@ const About = () => {
   const targetRef = UsePieceObserver();
 
   return (
-    <section
-      className='about pt-12 flex flex-col gap-20 justify-center items-center'
-      ref={targetRef}
-    >
+    <section className='about py-12 flex flex-col justify-center items-center' ref={targetRef}>
       <SectionTitle title='ABOUT ME' direction='left' />
       <div className='piece-hidden flex gap-8 justify-center flex-wrap'>
         <AboutCard Icon={BsFillPersonFill} contents={{ title: '이름', detail: '장현우' }} />

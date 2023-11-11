@@ -1,6 +1,6 @@
 const SectionTitle = ({ title, direction, color = 'black' }) => {
   return (
-    <div className='flex flex-col gap-4 items-center'>
+    <div className='flex flex-col gap-4 items-center mb-12'>
       <h2
         className={`font-bold title text-5xl ${
           direction === 'left' ? 'slide-left' : 'slide-right'

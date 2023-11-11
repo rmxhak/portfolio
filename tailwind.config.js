@@ -6,6 +6,9 @@ module.exports = {
       minWidth: {
         base: '640px',
       },
+      maxWidth: {
+        base: '1400px',
+      },
       minHeight: {
         base: '600px',
       },
