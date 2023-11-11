@@ -10,7 +10,6 @@ export const collection = {
 };
 
 export const createCarouselImages = (images) => {
-  console.log(images);
   if (images.length < 2) return;
   return [images.at(-1), ...images, images[0]];
 };

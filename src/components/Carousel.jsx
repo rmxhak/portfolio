@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
 
 const Carousel = ({ images }) => {
-  console.log(images);
   const [imgIndex, setImgIndex] = useState(1);
   const carouselRef = useRef(null);
   const timeId = useRef(null);
