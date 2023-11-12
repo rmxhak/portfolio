@@ -12,7 +12,7 @@ const ProjectCard = ({ title, addition }) => {
         <div className='m-auto rounded-md max-w-[800px]'>
           <Carousel images={images.createCarouselImages(images.collection[title.toLowerCase()])} />
         </div>
-        <div className='w-[90%] mt-8 m-auto lg:w-full'>
+        <div className='mt-8 m-auto lg:w-full'>
           <ProjectDesc title={title.toLowerCase()} addition={addition} />
         </div>
       </div>

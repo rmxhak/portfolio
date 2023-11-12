@@ -19,6 +19,9 @@
   section {
     @apply min-w-base min-h-base overflow-hidden;
   }
+  footer {
+    @apply min-w-base overflow-hidden;
+  }
 }
 
 @layer components {

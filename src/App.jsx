@@ -50,7 +50,7 @@ function App() {
   return (
     <>
       <Header currentList={currentList} nav={sections} sectionRef={sectionRef} />
-      <main className='relative'>
+      <main className='relative min-w-base'>
         <section ref={(el) => (sectionRef.current[0] = el)} className='home pb-1'>
           <Home sectionRef={sectionRef} />
         </section>
