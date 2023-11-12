@@ -20,10 +20,17 @@ const YOUTUBE_IMAGES = [
   './images/projects/youtube/youtube3.gif',
 ];
 
+const PORTFOLIO_IMAGES = [
+  './images/projects/portfolio/portfolio1.png',
+  './images/projects/portfolio/portfolio2.png',
+  './images/projects/portfolio/portfolio3.png',
+];
+
 export const collection = {
   trello: TRELLO_IMAGES,
   dui: DUI_IMAGES,
   youtube: YOUTUBE_IMAGES,
+  portfolio: PORTFOLIO_IMAGES,
 };
 
 export const createCarouselImages = (images) => {

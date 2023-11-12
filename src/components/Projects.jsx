@@ -36,6 +36,15 @@ const Projects = () => {
             url: 'https://main--jolly-daffodil-e0cd79.netlify.app/',
           }}
         />
+        <ProjectCard
+          title='PORTFOLIO'
+          addition={{
+            main: '간단한 자기소개, 기술 스택, 프로젝트를 소개하는 사이트',
+            frontend: 'Html, Css, JavaScript, react',
+            github: 'https://github.com/rmxhak/portfolio',
+            url: 'https://rmxhak.github.io/portfolio/',
+          }}
+        />
       </div>
     </div>
   );

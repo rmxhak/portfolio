@@ -1,4 +1,5 @@
 import DuiDom from '../../dom/DuiDom';
+import Portfolio from '../../dom/Portfolio';
 import TrelloDom from '../../dom/TrelloDom';
 import YoutubeDom from '../../dom/YoutubeDom';
 
@@ -6,6 +7,7 @@ const REPOSITORY = {
   trello: <TrelloDom />,
   dui: <DuiDom />,
   youtube: <YoutubeDom />,
+  portfolio: <Portfolio />,
 };
 
 const ProjectDesc = ({ title, addition }) => {
