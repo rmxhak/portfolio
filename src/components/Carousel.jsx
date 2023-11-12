@@ -42,7 +42,7 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className='overflow-hidden '>
+    <div className='overflow-hidden'>
       <ul ref={carouselRef} className={`w-full h-full flex translate-x-[100%]`}>
         {images.map((address, i) => (
           <li key={i} className={`min-w-full min-h-full`}>
@@ -55,7 +55,7 @@ const Carousel = ({ images }) => {
           <div
             key={i}
             onClick={() => handleMoveToSelect(i)}
-            className={`w-[40px] h-[12px] rounded-lg hover:cursor-pointer ${
+            className={`w-[40px] h-[8px] rounded-lg hover:cursor-pointer ${
               imgIndex - 1 === i ? 'bg-black' : 'bg-black/30'
             }`}
           ></div>

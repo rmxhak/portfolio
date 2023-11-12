@@ -54,6 +54,10 @@
   .skill-title {
     @apply text-2xl text-amber-500 font-bold border-b mb-2;
   }
+
+  .desc span {
+    color: red;
+  }
 }
 
 .nav {
