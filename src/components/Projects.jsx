@@ -6,7 +6,7 @@ const Projects = () => {
   const targetRef = UsePieceObserver();
 
   return (
-    <div ref={targetRef} className='p-12 h-full w-full bg-[#222222]'>
+    <div ref={targetRef} className='pt-12 pb-20 h-full w-full bg-[#222222]'>
       <SectionTitle title='PROJECTS' direction='left' color='white' />
       <div className='mt-8 max-w-[1100px] lg:m-auto'>
         <ProjectCard
